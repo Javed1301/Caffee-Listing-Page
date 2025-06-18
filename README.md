@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://your-demo-link.your-domain">
+    <a href="https://javed1301.github.io/Caffee-Listing-Page/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://your-url-to-the-solution">
+    <a href="https://github.com/Javed1301/Caffee-Listing-Page">
       Solution
     </a>
     <span> | </span>
