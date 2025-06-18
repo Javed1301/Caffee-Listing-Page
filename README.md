@@ -1,12 +1,118 @@
-# React + Vite
+<h1 align="center">Coffee Catalog Filter | devChallenges</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+   Solution for a challenge <a href="https://devchallenges.io/challenge/simple-coffee-listing" target="_blank">Simple Coffee Listing</a> from <a href="http://devchallenges.io" target="_blank">devChallenges.io</a>.
+</div>
 
-Currently, two official plugins are available:
+<div align="center">
+  <h3>
+    <a href="https://your-demo-link.your-domain">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://your-url-to-the-solution">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenge/simple-coffee-listing">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Overview](#overview)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Built with](#built-with)
+- [Features](#features)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+---
+
+## Overview
+
+![screenshot](./src/assets/Desktop_1350px.jpg)
+
+This is a React-based product listing project where users can filter coffee items by availability. Clicking on filter buttons dynamically updates the product list with visual feedback using conditional styling.
+
+### What I learned
+
+This project helped reinforce many core React concepts and UI practices:
+
+- 🧠 **React State Management**  
+  Learned how to use `useState` for UI state, especially for toggling filters like `"allProduct"` vs `"available"`.
+
+- 🔄 **Effect Hook (`useEffect`)**  
+  Learned how to load data once and respond to changes in filters or data with dependency arrays.  
+  Also fixed infinite re-render issues caused by missing dependency arrays.
+
+- 🔍 **Filtering Logic**  
+  Explored two strategies:
+  - Using `useState` to store filtered results.
+  - Computing filtered data directly inside `render` (more optimal for small datasets).
+
+- 🎨 **Conditional Styling and Rendering**  
+  - Changed button styles based on selected filter.
+  - Rendered different SVGs or tags based on coffee rating/availability.
+  - Used dynamic `className` expressions like:
+    ```jsx
+    className={productTag === "available" ? "tag-btn active" : "tag-btn"}
+    ```
+
+- 🧩 **Avoiding Anti-patterns**  
+  - Avoided using plain `let` variables for filtered data (since React doesn’t track them).
+  - Ensured all `.map()` loops use unique keys.
+
+- 📦 **Component Design**  
+  - Built reusable `<Card />` component.
+  - Used `props` for data and rendered conditionally inside.
+
+- 🧱 **Layout Focus: Grid**  
+  Emphasized using **CSS Grid** to build responsive, clean layouts for the product cards.
+
+### Useful resources
+
+- [React Docs – useEffect](https://reactjs.org/docs/hooks-effect.html) – Helped understand dependency array behavior and infinite loop issues.
+- [CSS Tricks – Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/) – Great reference for implementing grid-based layout.
+- [devChallenges Community](https://devchallenges.io/) – For motivation and good design prompts.
+
+---
+
+## Built with
+
+- Semantic HTML5 markup
+- CSS Grid Layout (emphasized)
+- CSS Modules / Inline styles
+- React (Functional Components)
+- React Hooks (`useState`, `useEffect`)
+
+---
+
+## Features
+
+- Filter products by availability using interactive buttons
+- Dynamic styling of active filters
+- Show product tags like “Popular” and “Sold Out” conditionally
+- Grid-based responsive product layout
+- SVG changes based on rating (0 vs >0)
+- Minimal component-based architecture using React
+
+---
+
+## Acknowledgements
+
+- DevChallenges.io for the challenge idea
+- React documentation for solidifying concepts
+- Stack Overflow and ChatGPT for debugging common pitfalls
+
+---
+
+## Author
+
+- GitHub: [@your-username](https://github.com/your-username)
+- Portfolio: [your-website.com](https://your-website.com)
